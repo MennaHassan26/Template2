@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+header{
+    width: 100%;
+    background-color: aqua;
+    padding:20px ;
+}
+.content{
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(12 , 1fr);
+    grid-template-areas: "one one one section section section section section section two two two"  ;
+}
+.content .one{
+background-color: green;
+padding: 10px;
+grid-area: one;
+}
+.content .two{
+    background-color: green;
+    padding: 10px;
+    grid-area: two;
+    }
+.content section {
+    background-color: brown;
+    padding: 10px;
+    grid-area: section;
+}
+footer{
+    width: 100%;
+    background-color: aqua;
+    padding:20px ;
+}
+@media (max-width: 768px){
+    .content{
+        display: grid;
+        grid-template-rows: 100px 300px 100px ;
+        grid-template-columns:  1fr;
+        grid-template-areas: "one" "section" "two";
+    }
+}
